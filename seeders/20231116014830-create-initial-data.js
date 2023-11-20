@@ -5,7 +5,7 @@ const { Users, Products } = require('../models');
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     try {
-      // Create users
+    
       const user1 = await Users.create({
         email: 'user1@example.com',
         password: 'password1',
@@ -40,7 +40,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    // You can implement rollback logic here if needed
-    // For example, delete the users and products created in the up function
+   
   },
 };
