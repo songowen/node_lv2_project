@@ -13,6 +13,7 @@ const requireAuth = (req, res, next) => {
     }
 
     const decoded = jwt.verify(token.split(' ')[1], process.env.JWT_SECRET);
+    console.log(decoded)
     req.user = decoded; // 인증된 사용자 정보를 request 객체에 추가
 
     next();
