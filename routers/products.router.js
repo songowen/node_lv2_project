@@ -52,19 +52,20 @@ router.put('/update/:productId', requireAuth, async (req, res) => {
   try {
     const { title, content, status } = req.body;
     const userId = req.user.userId; // 인증된 사용자의 userId
-
+console.log(req.user.userId)
     // 상품 ID
     const productId = req.params.productId;
 
     
-    const product = await Product.findById(productId);
+    const product = await Products.findOne({
+      where:{id:productId}});
 
     if (!product) {
       return res.status(404).json({ message: '상품 조회에 실패했습니다.' });
     }
 
     // 사용자의 ID와 상품을 생성한 사용자의 ID를 비교하여 수정 권한을 확인합니다.
-    if (product.createdBy.toString() !== userId) {
+    if (product.userId !== userId) {
       return res.status(401).json({ message: '상품을 수정할 권한이 없습니다.' });
     }
 

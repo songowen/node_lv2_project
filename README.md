@@ -1,10 +1,26 @@
 # 환경변수
-- .env 파일에 어떤 환경변수가 추가되어야 하는지 작성합니다.
-- key=value 형태에서 key만 나열합니다. value는 비밀!
 
-- DB_URL
-- JWT_SECRET
-- 그 밖의 사용한 환경변수를 나열해 주세요.
+JWT_SECRET="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJteVBheWxvYWREYXRhIjoxMjM0LCJpYXQiOjE3MDAyMDkyMTd9.63y7pU96VoZG1ZpN_3wOjjGgFCNRoadSogmPQwzAOyM"
+
+DEVELOPMENT_USERNAME="root"
+DEVELOPMENT_PASSWORD="root1234"
+DEVELOPMENT_DATABASE="expressdb_"
+DEVELOPMENT_HOST="express-database.cuwlbtxeri52.ap-northeast-2.rds.amazonaws.com"
+DEVELOPMENT_DIALECT="mysql"
+
+TEST_USERNAME="root"
+TEST_PASSWORD=null
+TEST_DATABASE="database_test"
+TEST_HOST="127.0.0.1",
+TEST_DIALECT="mysql"
+
+PRODUCTION_USERNAME="root",
+PRODUCTION_PASSWORD=null,
+PRODUCTION_DATABASE="database_production"
+PRODUCTION_HOST="127.0.0.1",
+PRODUCTION_DIALECT="mysql"
+
+
 
 # API 명세서 URL
 
